@@ -1,0 +1,395 @@
+{
+  "updated": "2026-06-07T00:09:04",
+  "date": "2026-06-07",
+  "sources": [
+    "Con telaio: Tutti ordini con telaio in Italia_20260606_234855.xlsx (2373 righe)",
+    "Senza telaio: senza_telaio_20260606_235008.xlsx (1969 righe)"
+  ],
+  "kpis": {
+    "total": 4342,
+    "con_telaio_file": 2373,
+    "senza_telaio_file": 1969,
+    "recent_orders": 107,
+    "vat_reduced": 123,
+    "deliveries_7d": 738,
+    "with_telaio": 4342
+  },
+  "total_orders": 4342,
+  "arrivals_by_day": [
+    {
+      "date": "2026-06-07",
+      "label": "Dom 07/06",
+      "total": 6,
+      "completed": 0,
+      "pending": 4,
+      "other": 2
+    },
+    {
+      "date": "2026-06-08",
+      "label": "Lun 08/06",
+      "total": 99,
+      "completed": 52,
+      "pending": 25,
+      "other": 22
+    },
+    {
+      "date": "2026-06-09",
+      "label": "Mar 09/06",
+      "total": 160,
+      "completed": 68,
+      "pending": 47,
+      "other": 45
+    },
+    {
+      "date": "2026-06-10",
+      "label": "Mer 10/06",
+      "total": 168,
+      "completed": 95,
+      "pending": 43,
+      "other": 30
+    },
+    {
+      "date": "2026-06-11",
+      "label": "Gio 11/06",
+      "total": 158,
+      "completed": 35,
+      "pending": 102,
+      "other": 21
+    },
+    {
+      "date": "2026-06-12",
+      "label": "Ven 12/06",
+      "total": 61,
+      "completed": 1,
+      "pending": 47,
+      "other": 13
+    },
+    {
+      "date": "2026-06-15",
+      "label": "Lun 15/06",
+      "total": 7,
+      "completed": 0,
+      "pending": 6,
+      "other": 1
+    },
+    {
+      "date": "2026-06-16",
+      "label": "Mar 16/06",
+      "total": 129,
+      "completed": 0,
+      "pending": 84,
+      "other": 45
+    },
+    {
+      "date": "2026-06-17",
+      "label": "Mer 17/06",
+      "total": 166,
+      "completed": 0,
+      "pending": 122,
+      "other": 44
+    },
+    {
+      "date": "2026-06-18",
+      "label": "Gio 18/06",
+      "total": 135,
+      "completed": 0,
+      "pending": 113,
+      "other": 22
+    },
+    {
+      "date": "2026-06-19",
+      "label": "Ven 19/06",
+      "total": 64,
+      "completed": 0,
+      "pending": 46,
+      "other": 18
+    },
+    {
+      "date": "2026-06-20",
+      "label": "Sab 20/06",
+      "total": 1,
+      "completed": 0,
+      "pending": 1,
+      "other": 0
+    },
+    {
+      "date": "2026-06-21",
+      "label": "Dom 21/06",
+      "total": 1,
+      "completed": 0,
+      "pending": 1,
+      "other": 0
+    },
+    {
+      "date": "2026-06-22",
+      "label": "Lun 22/06",
+      "total": 35,
+      "completed": 0,
+      "pending": 13,
+      "other": 22
+    },
+    {
+      "date": "2026-06-23",
+      "label": "Mar 23/06",
+      "total": 129,
+      "completed": 0,
+      "pending": 78,
+      "other": 51
+    },
+    {
+      "date": "2026-06-24",
+      "label": "Mer 24/06",
+      "total": 113,
+      "completed": 0,
+      "pending": 51,
+      "other": 62
+    },
+    {
+      "date": "2026-06-25",
+      "label": "Gio 25/06",
+      "total": 104,
+      "completed": 0,
+      "pending": 51,
+      "other": 53
+    },
+    {
+      "date": "2026-06-26",
+      "label": "Ven 26/06",
+      "total": 32,
+      "completed": 0,
+      "pending": 14,
+      "other": 18
+    },
+    {
+      "date": "2026-06-28",
+      "label": "Dom 28/06",
+      "total": 1,
+      "completed": 0,
+      "pending": 0,
+      "other": 1
+    },
+    {
+      "date": "2026-07-02",
+      "label": "Gio 02/07",
+      "total": 6,
+      "completed": 0,
+      "pending": 1,
+      "other": 5
+    }
+  ],
+  "weekly_deliveries": [
+    {
+      "date": "2026-06-08",
+      "weekday": "Monday",
+      "label": "08/06",
+      "count": 95,
+      "reg_completed": 93,
+      "reg_pending": 2,
+      "reg_other": 0
+    },
+    {
+      "date": "2026-06-09",
+      "weekday": "Tuesday",
+      "label": "09/06",
+      "count": 87,
+      "reg_completed": 63,
+      "reg_pending": 7,
+      "reg_other": 17
+    },
+    {
+      "date": "2026-06-10",
+      "weekday": "Wednesday",
+      "label": "10/06",
+      "count": 92,
+      "reg_completed": 65,
+      "reg_pending": 6,
+      "reg_other": 21
+    },
+    {
+      "date": "2026-06-11",
+      "weekday": "Thursday",
+      "label": "11/06",
+      "count": 132,
+      "reg_completed": 104,
+      "reg_pending": 11,
+      "reg_other": 17
+    },
+    {
+      "date": "2026-06-12",
+      "weekday": "Friday",
+      "label": "12/06",
+      "count": 307,
+      "reg_completed": 180,
+      "reg_pending": 84,
+      "reg_other": 43
+    },
+    {
+      "date": "2026-06-13",
+      "weekday": "Saturday",
+      "label": "13/06",
+      "count": 25,
+      "reg_completed": 2,
+      "reg_pending": 22,
+      "reg_other": 1
+    },
+    {
+      "date": "2026-06-15",
+      "weekday": "Monday",
+      "label": "15/06",
+      "count": 92,
+      "reg_completed": 1,
+      "reg_pending": 83,
+      "reg_other": 8
+    },
+    {
+      "date": "2026-06-16",
+      "weekday": "Tuesday",
+      "label": "16/06",
+      "count": 29,
+      "reg_completed": 0,
+      "reg_pending": 23,
+      "reg_other": 6
+    },
+    {
+      "date": "2026-06-17",
+      "weekday": "Wednesday",
+      "label": "17/06",
+      "count": 51,
+      "reg_completed": 0,
+      "reg_pending": 36,
+      "reg_other": 15
+    },
+    {
+      "date": "2026-06-18",
+      "weekday": "Thursday",
+      "label": "18/06",
+      "count": 111,
+      "reg_completed": 0,
+      "reg_pending": 84,
+      "reg_other": 27
+    },
+    {
+      "date": "2026-06-19",
+      "weekday": "Friday",
+      "label": "19/06",
+      "count": 191,
+      "reg_completed": 11,
+      "reg_pending": 141,
+      "reg_other": 39
+    },
+    {
+      "date": "2026-06-20",
+      "weekday": "Saturday",
+      "label": "20/06",
+      "count": 31,
+      "reg_completed": 0,
+      "reg_pending": 28,
+      "reg_other": 3
+    },
+    {
+      "date": "2026-06-22",
+      "weekday": "Monday",
+      "label": "22/06",
+      "count": 70,
+      "reg_completed": 0,
+      "reg_pending": 48,
+      "reg_other": 22
+    },
+    {
+      "date": "2026-06-23",
+      "weekday": "Tuesday",
+      "label": "23/06",
+      "count": 21,
+      "reg_completed": 0,
+      "reg_pending": 13,
+      "reg_other": 8
+    },
+    {
+      "date": "2026-06-24",
+      "weekday": "Wednesday",
+      "label": "24/06",
+      "count": 47,
+      "reg_completed": 0,
+      "reg_pending": 29,
+      "reg_other": 18
+    },
+    {
+      "date": "2026-06-25",
+      "weekday": "Thursday",
+      "label": "25/06",
+      "count": 102,
+      "reg_completed": 0,
+      "reg_pending": 47,
+      "reg_other": 55
+    },
+    {
+      "date": "2026-06-26",
+      "weekday": "Friday",
+      "label": "26/06",
+      "count": 178,
+      "reg_completed": 0,
+      "reg_pending": 126,
+      "reg_other": 52
+    },
+    {
+      "date": "2026-06-27",
+      "weekday": "Saturday",
+      "label": "27/06",
+      "count": 18,
+      "reg_completed": 0,
+      "reg_pending": 12,
+      "reg_other": 6
+    },
+    {
+      "date": "2026-06-29",
+      "weekday": "Monday",
+      "label": "29/06",
+      "count": 46,
+      "reg_completed": 0,
+      "reg_pending": 20,
+      "reg_other": 26
+    },
+    {
+      "date": "2026-06-30",
+      "weekday": "Tuesday",
+      "label": "30/06",
+      "count": 19,
+      "reg_completed": 0,
+      "reg_pending": 12,
+      "reg_other": 7
+    }
+  ],
+  "financial_distribution": {
+    "Confirmed": 2590,
+    "Denied": 24,
+    "Approved": 105,
+    "Conditional Approval": 75,
+    "Requested": 49,
+    "Pending": 117,
+    "Declined": 11,
+    "Expired": 18,
+    "Nodecision": 1,
+    "Preapproved": 1
+  },
+  "registration_distribution": {
+    "Pre-Delivery Validation Complete": 797,
+    "Not Started": 841,
+    "Completed": 520,
+    "On Hold": 22,
+    "Submitted": 110,
+    "Registration Revoked": 3,
+    "Awaiting Registration Fee": 65,
+    "In Progress": 15
+  },
+  "model_distribution": {
+    "Model 3": 2392,
+    "Model Y": 1932,
+    "Model S": 12,
+    "Model X": 6
+  },
+  "trade_in": {
+    "total": 623
+  },
+  "arrivi_shown": 3980,
+  "arrivi_excluded": 362
+}
