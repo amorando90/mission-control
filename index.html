@@ -1270,6 +1270,204 @@ body {
   .arrival-day-group { min-width: 60px; }
 }
 
+/* ---- STORE FILTER BAR ---- */
+.store-filter-section {
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.store-filter-bar {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 6px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.store-filter-bar::-webkit-scrollbar { display: none; }
+
+.store-chip {
+  flex-shrink: 0;
+  padding: 10px 18px;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  background: transparent;
+  color: var(--text-dim);
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  -webkit-tap-highlight-color: transparent;
+  white-space: nowrap;
+}
+
+.store-chip:active { transform: scale(0.95); }
+
+.store-chip.active {
+  border-color: var(--cyan);
+  background: var(--cyan);
+  color: #fff;
+  box-shadow: 0 0 12px rgba(6,182,212,0.35);
+}
+
+.store-chip .chip-count {
+  font-size: 0.7rem;
+  opacity: 0.7;
+  font-weight: 500;
+}
+
+/* ---- STORE DETAIL CARD ---- */
+.store-detail-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(6,182,212,0.2);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-top: 12px;
+  position: relative;
+  overflow: hidden;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  animation: storeCardFadeIn 0.3s ease-out;
+}
+
+@keyframes storeCardFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.store-detail-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+  opacity: 0.5;
+}
+
+.store-detail-header {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.store-detail-header .store-pin {
+  margin-right: 4px;
+}
+
+.store-detail-total {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.store-detail-total-num {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+}
+
+.store-detail-total-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.store-bar-section {
+  margin-bottom: 14px;
+}
+
+.store-bar-section:last-child {
+  margin-bottom: 0;
+}
+
+.store-bar-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.store-bar-track {
+  width: 100%;
+  height: 14px;
+  border-radius: 7px;
+  overflow: hidden;
+  display: flex;
+  background: rgba(255,255,255,0.05);
+  margin-bottom: 6px;
+}
+
+.store-bar-seg {
+  height: 100%;
+  transition: width 0.4s ease;
+  min-width: 0;
+}
+
+.store-bar-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  font-size: 0.65rem;
+  color: var(--text-dim);
+}
+
+.store-bar-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.store-bar-legend-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.store-arrival-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.store-arrival-icon {
+  font-size: 1.2rem;
+}
+
+.store-arrival-val {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.store-arrival-label {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
 @media (max-width: 440px) {
   .dist-row { grid-template-columns: 1fr; }
   .donut-wrapper { width: 100px; height: 100px; }
@@ -1345,6 +1543,13 @@ body {
 
       <div class="section-title">Key Metrics</div>
       <div class="kpi-grid" id="kpi-grid"></div>
+
+      <!-- Store Filter -->
+      <div class="store-filter-section" id="store-filter-section" style="display:none;">
+        <div class="section-title">Store Filter</div>
+        <div class="store-filter-bar" id="store-filter-bar"></div>
+        <div id="store-detail-container"></div>
+      </div>
 
       <div class="section-title">Weekly Deliveries</div>
       <div class="weekly-scroll" id="weekly-scroll"></div>
@@ -1432,6 +1637,7 @@ body {
   // ---- STATE ----
   var jsonData = null; // data.json content
   var isJsonMode = false;
+  var selectedStore = null; // store filter: null = "All"
 
   // File-upload state
   var allData = [];
@@ -1510,6 +1716,9 @@ body {
   var modelChart = $('model-chart');
   var tradeInCard = $('trade-in-card');
   var pullIndicator = $('pullIndicator');
+  var storeFilterSection = $('store-filter-section');
+  var storeFilterBar = $('store-filter-bar');
+  var storeDetailContainer = $('store-detail-container');
 
   // ---- INIT: Try loading data.json ----
   function init() {
@@ -1595,6 +1804,7 @@ body {
     }
 
     renderJsonKPIs();
+    renderStoreFilter();
     renderWeeklyDeliveries();
     renderArrivalsChart();
     renderDistributions();
@@ -1614,6 +1824,222 @@ body {
       if (typeof val === 'number') val = val.toLocaleString('it-IT');
       return '<div class="kpi-card"><div class="kpi-value">' + escapeHtml(val) + '</div><div class="kpi-label">' + escapeHtml(k) + '</div></div>';
     }).join('');
+  }
+
+  // ---- STORE FILTER ----
+  function extractShortStoreName(fullName) {
+    if (!fullName) return fullName;
+    // Pattern: EU-IT-Region-City-Address or EU-IT-City-Address
+    var parts = fullName.split('-');
+    // Remove "EU" and "IT" prefix parts
+    if (parts.length >= 3 && parts[0].trim() === 'EU' && parts[1].trim() === 'IT') {
+      // parts[2] could be Region or City
+      // If we have 4+ parts: EU-IT-Region-City-..., city is parts[3]
+      // If we have exactly 3 parts: EU-IT-City-Address, city is parts[2]
+      if (parts.length >= 4) {
+        // Check: if parts[3] starts with a digit or space, the city is parts[2]
+        var candidate3 = parts[3].trim();
+        var candidate2 = parts[2].trim();
+        // Heuristic: if parts[3] starts with a digit, parts[2] is the city
+        if (/^\d/.test(candidate3) || parts.length === 3) {
+          return candidate2;
+        }
+        // Known regions tend to be longer descriptive names; city is usually parts[3]
+        // but if parts[3] looks like an address (starts with number or "Via"), use parts[2]
+        if (/^(Via|Viale|Piazza|Corso|Strada|Largo|Vicolo)\b/i.test(candidate3)) {
+          return candidate2;
+        }
+        return candidate3;
+      }
+      // 3 parts: EU-IT-CityOrRegion
+      return parts[2].trim();
+    }
+    // Fallback: return last meaningful segment
+    return fullName;
+  }
+
+  function renderStoreFilter() {
+    var storeDist = jsonData.store_distribution;
+    if (!storeDist || Object.keys(storeDist).length === 0) {
+      storeFilterSection.style.display = 'none';
+      return;
+    }
+
+    storeFilterSection.style.display = 'block';
+
+    // Build sorted store list
+    var storeEntries = [];
+    Object.keys(storeDist).forEach(function(fullName) {
+      storeEntries.push({
+        full: fullName,
+        short: extractShortStoreName(fullName),
+        count: storeDist[fullName] || 0
+      });
+    });
+    storeEntries.sort(function(a, b) { return b.count - a.count; });
+
+    // Render chips
+    storeFilterBar.innerHTML = '';
+
+    // "All" chip
+    var allChip = document.createElement('button');
+    allChip.className = 'store-chip' + (selectedStore === null ? ' active' : '');
+    allChip.innerHTML = 'All';
+    allChip.addEventListener('click', function() {
+      selectedStore = null;
+      renderStoreChipsActive();
+      renderStoreDetail();
+    });
+    storeFilterBar.appendChild(allChip);
+
+    storeEntries.forEach(function(entry) {
+      var chip = document.createElement('button');
+      chip.className = 'store-chip' + (selectedStore === entry.full ? ' active' : '');
+      chip.innerHTML = escapeHtml(entry.short) + ' <span class="chip-count">' + entry.count.toLocaleString('it-IT') + '</span>';
+      chip.addEventListener('click', function() {
+        selectedStore = entry.full;
+        renderStoreChipsActive();
+        renderStoreDetail();
+      });
+      storeFilterBar.appendChild(chip);
+    });
+
+    renderStoreDetail();
+  }
+
+  function renderStoreChipsActive() {
+    var chips = storeFilterBar.querySelectorAll('.store-chip');
+    chips.forEach(function(chip, idx) {
+      if (idx === 0) {
+        // "All" chip
+        chip.className = 'store-chip' + (selectedStore === null ? ' active' : '');
+      } else {
+        // Get the store entries again in order
+        var storeDist = jsonData.store_distribution;
+        var storeEntries = [];
+        Object.keys(storeDist).forEach(function(fullName) {
+          storeEntries.push({ full: fullName, count: storeDist[fullName] || 0 });
+        });
+        storeEntries.sort(function(a, b) { return b.count - a.count; });
+        if (idx - 1 < storeEntries.length) {
+          chip.className = 'store-chip' + (selectedStore === storeEntries[idx - 1].full ? ' active' : '');
+        }
+      }
+    });
+  }
+
+  function renderStoreDetail() {
+    if (selectedStore === null) {
+      storeDetailContainer.innerHTML = '';
+      return;
+    }
+
+    var storeKpis = jsonData.store_kpis ? jsonData.store_kpis[selectedStore] : null;
+    var storeArrivals = jsonData.store_arrivals ? jsonData.store_arrivals[selectedStore] : null;
+    var storeDist = jsonData.store_distribution ? jsonData.store_distribution[selectedStore] : 0;
+
+    var total = (storeKpis && storeKpis.total) ? storeKpis.total : storeDist || 0;
+
+    // Registration breakdown
+    var regData = storeKpis ? storeKpis.registration : null;
+    var regBarHtml = '';
+    if (regData) {
+      var regCompleted = 0, regPending = 0, regNotStarted = 0;
+      Object.keys(regData).forEach(function(k) {
+        var kl = k.toLowerCase();
+        if (kl.indexOf('completed') !== -1 || kl.indexOf('submitted') !== -1) {
+          regCompleted += regData[k];
+        } else if (kl.indexOf('not started') !== -1 || kl.indexOf('notstarted') !== -1) {
+          regNotStarted += regData[k];
+        } else {
+          regPending += regData[k];
+        }
+      });
+      var regTotal = regCompleted + regPending + regNotStarted;
+      var pctRC = regTotal > 0 ? (regCompleted / regTotal * 100) : 0;
+      var pctRP = regTotal > 0 ? (regPending / regTotal * 100) : 0;
+      var pctRN = regTotal > 0 ? (regNotStarted / regTotal * 100) : 0;
+
+      regBarHtml = '<div class="store-bar-section">' +
+        '<div class="store-bar-title">Registration</div>' +
+        '<div class="store-bar-track">' +
+          '<div class="store-bar-seg" style="width:' + pctRC + '%;background:var(--green)"></div>' +
+          '<div class="store-bar-seg" style="width:' + pctRP + '%;background:var(--yellow)"></div>' +
+          '<div class="store-bar-seg" style="width:' + pctRN + '%;background:var(--red)"></div>' +
+        '</div>' +
+        '<div class="store-bar-legend">' +
+          '<span class="store-bar-legend-item"><span class="store-bar-legend-dot" style="background:var(--green)"></span>Completed ' + regCompleted + '</span>' +
+          '<span class="store-bar-legend-item"><span class="store-bar-legend-dot" style="background:var(--yellow)"></span>Pending ' + regPending + '</span>' +
+          '<span class="store-bar-legend-item"><span class="store-bar-legend-dot" style="background:var(--red)"></span>Not Started ' + regNotStarted + '</span>' +
+        '</div>' +
+      '</div>';
+    }
+
+    // Financial breakdown
+    var finData = storeKpis ? storeKpis.financial : null;
+    var finBarHtml = '';
+    if (finData) {
+      var finConfirmed = 0, finCash = 0, finPending = 0, finDeclined = 0;
+      Object.keys(finData).forEach(function(k) {
+        var kl = k.toLowerCase();
+        if (kl.indexOf('confirmed') !== -1 || kl.indexOf('approved') !== -1) {
+          finConfirmed += finData[k];
+        } else if (kl === 'cash' || kl.indexOf('cash') !== -1) {
+          finCash += finData[k];
+        } else if (kl.indexOf('pending') !== -1) {
+          finPending += finData[k];
+        } else if (kl.indexOf('declined') !== -1 || kl.indexOf('rejected') !== -1) {
+          finDeclined += finData[k];
+        } else {
+          finPending += finData[k]; // bucket unknown into pending
+        }
+      });
+      var finTotal = finConfirmed + finCash + finPending + finDeclined;
+      var pctFC = finTotal > 0 ? (finConfirmed / finTotal * 100) : 0;
+      var pctFCash = finTotal > 0 ? (finCash / finTotal * 100) : 0;
+      var pctFP = finTotal > 0 ? (finPending / finTotal * 100) : 0;
+      var pctFD = finTotal > 0 ? (finDeclined / finTotal * 100) : 0;
+
+      finBarHtml = '<div class="store-bar-section">' +
+        '<div class="store-bar-title">Financial</div>' +
+        '<div class="store-bar-track">' +
+          '<div class="store-bar-seg" style="width:' + pctFC + '%;background:var(--green)"></div>' +
+          '<div class="store-bar-seg" style="width:' + pctFCash + '%;background:var(--blue)"></div>' +
+          '<div class="store-bar-seg" style="width:' + pctFP + '%;background:var(--yellow)"></div>' +
+          '<div class="store-bar-seg" style="width:' + pctFD + '%;background:var(--red)"></div>' +
+        '</div>' +
+        '<div class="store-bar-legend">' +
+          '<span class="store-bar-legend-item"><span class="store-bar-legend-dot" style="background:var(--green)"></span>Confirmed ' + finConfirmed + '</span>' +
+          '<span class="store-bar-legend-item"><span class="store-bar-legend-dot" style="background:var(--blue)"></span>Cash ' + finCash + '</span>' +
+          '<span class="store-bar-legend-item"><span class="store-bar-legend-dot" style="background:var(--yellow)"></span>Pending ' + finPending + '</span>' +
+          '<span class="store-bar-legend-item"><span class="store-bar-legend-dot" style="background:var(--red)"></span>Declined ' + finDeclined + '</span>' +
+        '</div>' +
+      '</div>';
+    }
+
+    // Arrivals row
+    var arrivalHtml = '';
+    if (storeArrivals != null) {
+      arrivalHtml = '<div class="store-arrival-row">' +
+        '<div class="store-arrival-icon">&#128666;</div>' +
+        '<div>' +
+          '<div class="store-arrival-val">' + Number(storeArrivals).toLocaleString('it-IT') + '</div>' +
+          '<div class="store-arrival-label">Arrivi previsti</div>' +
+        '</div>' +
+      '</div>';
+    }
+
+    storeDetailContainer.innerHTML =
+      '<div class="store-detail-card">' +
+        '<div class="store-detail-header"><span class="store-pin">&#128205;</span>' + escapeHtml(selectedStore) + ' &mdash; ' + total.toLocaleString('it-IT') + ' ordini</div>' +
+        '<div class="store-detail-total">' +
+          '<span class="store-detail-total-num">' + total.toLocaleString('it-IT') + '</span>' +
+          '<span class="store-detail-total-label">Total Orders</span>' +
+        '</div>' +
+        regBarHtml +
+        finBarHtml +
+        arrivalHtml +
+      '</div>';
   }
 
   function renderWeeklyDeliveries() {
