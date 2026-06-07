@@ -1,8 +1,8 @@
 {
-  "updated": "2026-06-07T19:57:46",
+  "updated": "2026-06-07T21:50:04",
   "date": "2026-06-07",
   "sources": [
-    "Con telaio: Tutti ordini con telaio in Italia_20260607_195600.xlsx (2374 righe)",
+    "Con telaio: Tutti ordini con telaio in Italia_20260607_214746.xlsx (2374 righe)",
     "Senza telaio: senza_telaio_20260607_195713.xlsx (1975 righe)"
   ],
   "kpis": {
@@ -366,8 +366,8 @@
     "Requested": 48,
     "Approved": 104,
     "Pending": 118,
-    "Declined": 11,
     "Expired": 19,
+    "Declined": 11,
     "Nodecision": 1,
     "Preapproved": 1
   },
@@ -396,13 +396,13 @@
     "EU-IT-Bologna-Via Giovanni Elkan": 324,
     "EU-IT-Puglia-Zona Industriale-19 Viale Prospero Chartroux": 58,
     "EU-IT-Lazio-Roma-145 Via Carlo Emery": 15,
-    "EU-IT-Turin-Strada di Settimo": 1,
-    "EU-NL-Gefco Oosterhout": 1,
+    "EU-IT-Toscana-Campi Bisenzio-140 Via fra Guittone": 1,
+    "EU-IT-Lombardia-Peschiera Borromeo-23-Via Liguria": 1,
     "EU-IT-Veneto-Padova-11-Via Portogallo": 1,
     "EU-IT-Veneto-Verona-12 Viale delle Nazioni": 1,
     "EU-IT-Brescia-Castenedolo": 1,
-    "EU-IT-Toscana-Campi Bisenzio-140 Via fra Guittone": 1,
-    "EU-IT-Lombardia-Peschiera Borromeo-23-Via Liguria": 1
+    "EU-IT-Turin-Strada di Settimo": 1,
+    "EU-NL-Gefco Oosterhout": 1
   },
   "store_kpis": {
     "EU-IT-Veneto-Verona-31-Viale delle Nazioni": {
@@ -413,16 +413,16 @@
         "Completed": 139,
         "Registration Revoked": 2,
         "Submitted": 25,
-        "Awaiting Registration Fee": 17,
-        "On Hold": 3
+        "On Hold": 3,
+        "Awaiting Registration Fee": 17
       },
       "financial": {
         "Confirmed": 416,
         "Requested": 5,
         "Conditional Approval": 6,
         "Pending": 23,
-        "Denied": 4,
         "Declined": 2,
+        "Denied": 4,
         "Approved": 22,
         "Expired": 1
       }
@@ -446,8 +446,8 @@
         "Approved": 48,
         "Pending": 56,
         "Requested": 34,
-        "Declined": 4,
         "Expired": 13,
+        "Declined": 4,
         "Preapproved": 1
       }
     },
@@ -462,8 +462,8 @@
       },
       "financial": {
         "Confirmed": 114,
-        "Approved": 5,
         "Pending": 9,
+        "Approved": 5,
         "Expired": 1,
         "Conditional Approval": 3,
         "Requested": 1
@@ -495,16 +495,16 @@
         "Completed": 67,
         "Not Started": 98,
         "Pre-Delivery Validation Complete": 63,
+        "On Hold": 2,
         "Awaiting Registration Fee": 4,
-        "Submitted": 1,
-        "On Hold": 2
+        "Submitted": 1
       },
       "financial": {
         "Confirmed": 223,
         "Conditional Approval": 5,
-        "Requested": 4,
         "Pending": 14,
         "Approved": 12,
+        "Requested": 4,
         "Declined": 3,
         "Denied": 2,
         "Expired": 1,
@@ -517,9 +517,9 @@
         "Completed": 82,
         "Pre-Delivery Validation Complete": 42,
         "Not Started": 42,
-        "On Hold": 1,
         "Awaiting Registration Fee": 3,
-        "Submitted": 2
+        "Submitted": 2,
+        "On Hold": 1
       },
       "financial": {
         "Confirmed": 151,
@@ -558,16 +558,16 @@
         "Confirmed": 5
       }
     },
-    "EU-IT-Turin-Strada di Settimo": {
+    "EU-IT-Toscana-Campi Bisenzio-140 Via fra Guittone": {
       "total": 1,
       "registration": {
         "Not Started": 1
       },
       "financial": {
-        "Denied": 1
+        "Confirmed": 1
       }
     },
-    "EU-NL-Gefco Oosterhout": {
+    "EU-IT-Lombardia-Peschiera Borromeo-23-Via Liguria": {
       "total": 1,
       "registration": {
         "Not Started": 1
@@ -597,16 +597,16 @@
       },
       "financial": {}
     },
-    "EU-IT-Toscana-Campi Bisenzio-140 Via fra Guittone": {
+    "EU-IT-Turin-Strada di Settimo": {
       "total": 1,
       "registration": {
         "Not Started": 1
       },
       "financial": {
-        "Confirmed": 1
+        "Denied": 1
       }
     },
-    "EU-IT-Lombardia-Peschiera Borromeo-23-Via Liguria": {
+    "EU-NL-Gefco Oosterhout": {
       "total": 1,
       "registration": {
         "Not Started": 1
@@ -624,13 +624,13 @@
     "EU-IT-Lazio-Roma-24 Via Montano": 382,
     "EU-IT-Puglia-Zona Industriale-19 Viale Prospero Chartroux": 42,
     "EU-IT-Veneto-Verona-12 Viale delle Nazioni": 1,
-    "EU-NL-Gefco Oosterhout": 1,
-    "EU-IT-Veneto-Padova-11-Via Portogallo": 1,
     "EU-IT-Toscana-Campi Bisenzio-140 Via fra Guittone": 1,
-    "EU-IT-Lombardia-Peschiera Borromeo-23-Via Liguria": 1
+    "EU-IT-Lombardia-Peschiera Borromeo-23-Via Liguria": 1,
+    "EU-IT-Veneto-Padova-11-Via Portogallo": 1,
+    "EU-NL-Gefco Oosterhout": 1
   },
   "trade_in": {
-    "total": 11
+    "total": 623
   },
   "arrivi_shown": 3986,
   "arrivi_excluded": 363
