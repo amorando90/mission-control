@@ -1,29 +1,21 @@
 {
-  "updated": "2026-06-07T23:25:43",
-  "date": "2026-06-07",
+  "updated": "2026-06-08T07:26:10",
+  "date": "2026-06-08",
   "sources": [
-    "Con telaio: Tutti gli ordini con telaio in Italia_20260607_212417.xlsx (2374 righe)",
+    "Con telaio: Tutti ordini con telaio in Italia_20260608_072318.xlsx (2374 righe)",
     "Senza telaio: Ordini senza telaio_20260607_212506.xlsx (1976 righe)"
   ],
   "kpis": {
     "total": 4350,
     "con_telaio_file": 2374,
     "senza_telaio_file": 1976,
-    "recent_orders": 115,
+    "recent_orders": 68,
     "vat_reduced": 123,
-    "deliveries_7d": 738,
+    "deliveries_7d": 830,
     "with_telaio": 4350
   },
   "total_orders": 4350,
   "arrivals_by_day": [
-    {
-      "date": "2026-06-07",
-      "label": "Dom 07/06",
-      "total": 6,
-      "completed": 0,
-      "pending": 4,
-      "other": 2
-    },
     {
       "date": "2026-06-08",
       "label": "Lun 08/06",
@@ -35,26 +27,26 @@
     {
       "date": "2026-06-09",
       "label": "Mar 09/06",
-      "total": 160,
+      "total": 148,
       "completed": 68,
       "pending": 47,
-      "other": 45
+      "other": 33
     },
     {
       "date": "2026-06-10",
       "label": "Mer 10/06",
-      "total": 168,
+      "total": 196,
       "completed": 95,
-      "pending": 43,
-      "other": 30
+      "pending": 44,
+      "other": 57
     },
     {
       "date": "2026-06-11",
       "label": "Gio 11/06",
-      "total": 158,
+      "total": 180,
       "completed": 35,
-      "pending": 102,
-      "other": 21
+      "pending": 105,
+      "other": 40
     },
     {
       "date": "2026-06-12",
@@ -91,18 +83,18 @@
     {
       "date": "2026-06-18",
       "label": "Gio 18/06",
-      "total": 135,
+      "total": 134,
       "completed": 0,
-      "pending": 113,
+      "pending": 112,
       "other": 22
     },
     {
       "date": "2026-06-19",
       "label": "Ven 19/06",
-      "total": 64,
+      "total": 66,
       "completed": 0,
       "pending": 46,
-      "other": 18
+      "other": 20
     },
     {
       "date": "2026-06-20",
@@ -123,26 +115,26 @@
     {
       "date": "2026-06-22",
       "label": "Lun 22/06",
-      "total": 36,
+      "total": 40,
       "completed": 0,
-      "pending": 13,
-      "other": 23
+      "pending": 19,
+      "other": 21
     },
     {
       "date": "2026-06-23",
       "label": "Mar 23/06",
-      "total": 129,
+      "total": 131,
       "completed": 0,
       "pending": 78,
-      "other": 51
+      "other": 53
     },
     {
       "date": "2026-06-24",
       "label": "Mer 24/06",
-      "total": 113,
+      "total": 115,
       "completed": 0,
       "pending": 51,
-      "other": 62
+      "other": 64
     },
     {
       "date": "2026-06-25",
@@ -361,109 +353,124 @@
   ],
   "financial_distribution": {
     "Confirmed": 2594,
-    "Pending": 118,
     "Approved": 104,
     "Conditional Approval": 76,
-    "Requested": 49,
-    "Declined": 11,
     "Denied": 25,
+    "Pending": 118,
+    "Requested": 49,
     "Expired": 19,
+    "Declined": 11,
     "Nodecision": 1,
     "Preapproved": 1
   },
   "registration_distribution": {
-    "Submitted": 110,
     "Not Started": 842,
-    "Completed": 520,
-    "On Hold": 22,
     "Pre-Delivery Validation Complete": 797,
+    "Submitted": 110,
+    "Completed": 520,
     "Awaiting Registration Fee": 65,
     "In Progress": 15,
+    "On Hold": 22,
     "Registration Revoked": 3
   },
   "model_distribution": {
-    "Model 3": 2395,
     "Model Y": 1937,
+    "Model 3": 2395,
     "Model S": 12,
     "Model X": 6
   },
   "store_distribution": {
-    "EU-IT-Lombardia-Vittuone-1 Via Bellini": 2172,
     "EU-IT-Veneto-Verona-31-Viale delle Nazioni": 880,
+    "EU-IT-Lombardia-Vittuone-1 Via Bellini": 2172,
+    "EU-IT-Puglia-Zona Industriale-19 Viale Prospero Chartroux": 58,
     "EU-IT-Bologna-Via Giovanni Elkan": 324,
     "EU-IT-Florence-Via Ferrarin": 209,
     "EU-IT-CAMPANIA-Marcianise-7 Viale Carlo III di Borbone": 266,
     "EU-IT-Lazio-Roma-24 Via Montano": 419,
-    "EU-IT-Puglia-Zona Industriale-19 Viale Prospero Chartroux": 58,
-    "EU-IT-Toscana-Campi Bisenzio-140 Via fra Guittone": 1,
-    "EU-IT-Lombardia-Peschiera Borromeo-23-Via Liguria": 1,
     "EU-IT-Lazio-Roma-145 Via Carlo Emery": 15,
-    "EU-IT-Turin-Strada di Settimo": 1,
-    "EU-NL-Gefco Oosterhout": 1,
     "EU-IT-Veneto-Padova-11-Via Portogallo": 1,
     "EU-IT-Veneto-Verona-12 Viale delle Nazioni": 1,
-    "EU-IT-Brescia-Castenedolo": 1
+    "EU-IT-Brescia-Castenedolo": 1,
+    "EU-IT-Toscana-Campi Bisenzio-140 Via fra Guittone": 1,
+    "EU-IT-Lombardia-Peschiera Borromeo-23-Via Liguria": 1,
+    "EU-IT-Turin-Strada di Settimo": 1,
+    "EU-NL-Gefco Oosterhout": 1
   },
   "store_kpis": {
-    "EU-IT-Lombardia-Vittuone-1 Via Bellini": {
-      "total": 2172,
-      "registration": {
-        "Submitted": 82,
-        "Not Started": 434,
-        "Completed": 177,
-        "On Hold": 11,
-        "Pre-Delivery Validation Complete": 415,
-        "In Progress": 15,
-        "Awaiting Registration Fee": 24,
-        "Registration Revoked": 1
-      },
-      "financial": {
-        "Confirmed": 1487,
-        "Approved": 48,
-        "Pending": 56,
-        "Conditional Approval": 55,
-        "Requested": 34,
-        "Declined": 4,
-        "Denied": 14,
-        "Expired": 13,
-        "Preapproved": 1
-      }
-    },
     "EU-IT-Veneto-Verona-31-Viale delle Nazioni": {
       "total": 880,
       "registration": {
+        "Not Started": 151,
+        "Submitted": 25,
         "Completed": 139,
         "Pre-Delivery Validation Complete": 155,
-        "On Hold": 3,
-        "Submitted": 25,
         "Awaiting Registration Fee": 17,
-        "Not Started": 151,
+        "On Hold": 3,
         "Registration Revoked": 2
       },
       "financial": {
         "Confirmed": 416,
-        "Pending": 23,
-        "Conditional Approval": 6,
         "Denied": 5,
-        "Requested": 5,
+        "Pending": 23,
         "Declined": 2,
+        "Requested": 5,
+        "Conditional Approval": 6,
         "Approved": 22,
         "Expired": 1
+      }
+    },
+    "EU-IT-Lombardia-Vittuone-1 Via Bellini": {
+      "total": 2172,
+      "registration": {
+        "Pre-Delivery Validation Complete": 415,
+        "Not Started": 434,
+        "Completed": 177,
+        "Submitted": 82,
+        "Awaiting Registration Fee": 24,
+        "In Progress": 15,
+        "On Hold": 11,
+        "Registration Revoked": 1
+      },
+      "financial": {
+        "Confirmed": 1487,
+        "Conditional Approval": 55,
+        "Requested": 34,
+        "Pending": 56,
+        "Expired": 13,
+        "Declined": 4,
+        "Approved": 48,
+        "Denied": 14,
+        "Preapproved": 1
+      }
+    },
+    "EU-IT-Puglia-Zona Industriale-19 Viale Prospero Chartroux": {
+      "total": 58,
+      "registration": {
+        "Pre-Delivery Validation Complete": 6,
+        "Completed": 15,
+        "Not Started": 7
+      },
+      "financial": {
+        "Confirmed": 40,
+        "Denied": 1,
+        "Approved": 1,
+        "Expired": 1,
+        "Pending": 1
       }
     },
     "EU-IT-Bologna-Via Giovanni Elkan": {
       "total": 324,
       "registration": {
-        "Pre-Delivery Validation Complete": 42,
-        "Completed": 82,
         "Not Started": 42,
+        "Completed": 82,
+        "Pre-Delivery Validation Complete": 42,
+        "Submitted": 2,
         "Awaiting Registration Fee": 3,
-        "On Hold": 1,
-        "Submitted": 2
+        "On Hold": 1
       },
       "financial": {
-        "Confirmed": 151,
         "Approved": 10,
+        "Confirmed": 151,
         "Requested": 3,
         "Pending": 9,
         "Conditional Approval": 2,
@@ -477,13 +484,13 @@
         "Not Started": 28,
         "Awaiting Registration Fee": 7,
         "Pre-Delivery Validation Complete": 66,
-        "On Hold": 4,
-        "Completed": 9
+        "Completed": 9,
+        "On Hold": 4
       },
       "financial": {
         "Confirmed": 114,
-        "Pending": 9,
         "Approved": 5,
+        "Pending": 9,
         "Conditional Approval": 3,
         "Expired": 1,
         "Requested": 2
@@ -492,17 +499,17 @@
     "EU-IT-CAMPANIA-Marcianise-7 Viale Carlo III di Borbone": {
       "total": 266,
       "registration": {
-        "Not Started": 70,
-        "Awaiting Registration Fee": 7,
-        "Completed": 29,
         "Pre-Delivery Validation Complete": 47,
+        "Not Started": 70,
+        "Completed": 29,
+        "Awaiting Registration Fee": 7,
         "On Hold": 1
       },
       "financial": {
         "Confirmed": 156,
+        "Pending": 6,
         "Conditional Approval": 5,
         "Approved": 6,
-        "Pending": 6,
         "Denied": 2,
         "Declined": 1,
         "Requested": 1,
@@ -513,82 +520,35 @@
       "total": 419,
       "registration": {
         "Not Started": 98,
-        "Pre-Delivery Validation Complete": 63,
         "Completed": 67,
-        "On Hold": 2,
+        "Pre-Delivery Validation Complete": 63,
         "Awaiting Registration Fee": 4,
-        "Submitted": 1
+        "Submitted": 1,
+        "On Hold": 2
       },
       "financial": {
-        "Pending": 14,
         "Confirmed": 223,
-        "Conditional Approval": 5,
-        "Requested": 4,
         "Approved": 12,
+        "Conditional Approval": 5,
+        "Pending": 14,
+        "Requested": 4,
         "Denied": 2,
         "Nodecision": 1,
         "Declined": 3,
         "Expired": 1
       }
     },
-    "EU-IT-Puglia-Zona Industriale-19 Viale Prospero Chartroux": {
-      "total": 58,
-      "registration": {
-        "Not Started": 7,
-        "Completed": 15,
-        "Pre-Delivery Validation Complete": 6
-      },
-      "financial": {
-        "Confirmed": 40,
-        "Denied": 1,
-        "Approved": 1,
-        "Expired": 1,
-        "Pending": 1
-      }
-    },
-    "EU-IT-Toscana-Campi Bisenzio-140 Via fra Guittone": {
-      "total": 1,
-      "registration": {
-        "Not Started": 1
-      },
-      "financial": {
-        "Confirmed": 1
-      }
-    },
-    "EU-IT-Lombardia-Peschiera Borromeo-23-Via Liguria": {
-      "total": 1,
-      "registration": {
-        "Not Started": 1
-      },
-      "financial": {}
-    },
     "EU-IT-Lazio-Roma-145 Via Carlo Emery": {
       "total": 15,
       "registration": {
-        "Not Started": 6,
         "Awaiting Registration Fee": 3,
-        "Pre-Delivery Validation Complete": 2,
-        "Completed": 2
+        "Not Started": 6,
+        "Completed": 2,
+        "Pre-Delivery Validation Complete": 2
       },
       "financial": {
         "Confirmed": 5
       }
-    },
-    "EU-IT-Turin-Strada di Settimo": {
-      "total": 1,
-      "registration": {
-        "Not Started": 1
-      },
-      "financial": {
-        "Denied": 1
-      }
-    },
-    "EU-NL-Gefco Oosterhout": {
-      "total": 1,
-      "registration": {
-        "Not Started": 1
-      },
-      "financial": {}
     },
     "EU-IT-Veneto-Padova-11-Via Portogallo": {
       "total": 1,
@@ -612,6 +572,38 @@
         "Pre-Delivery Validation Complete": 1
       },
       "financial": {}
+    },
+    "EU-IT-Toscana-Campi Bisenzio-140 Via fra Guittone": {
+      "total": 1,
+      "registration": {
+        "Not Started": 1
+      },
+      "financial": {
+        "Confirmed": 1
+      }
+    },
+    "EU-IT-Lombardia-Peschiera Borromeo-23-Via Liguria": {
+      "total": 1,
+      "registration": {
+        "Not Started": 1
+      },
+      "financial": {}
+    },
+    "EU-IT-Turin-Strada di Settimo": {
+      "total": 1,
+      "registration": {
+        "Not Started": 1
+      },
+      "financial": {
+        "Denied": 1
+      }
+    },
+    "EU-NL-Gefco Oosterhout": {
+      "total": 1,
+      "registration": {
+        "Not Started": 1
+      },
+      "financial": {}
     }
   },
   "store_arrivals": {
@@ -624,10 +616,10 @@
     "EU-IT-Lazio-Roma-24 Via Montano": 382,
     "EU-IT-Puglia-Zona Industriale-19 Viale Prospero Chartroux": 42,
     "EU-IT-Veneto-Verona-12 Viale delle Nazioni": 1,
+    "EU-IT-Veneto-Padova-11-Via Portogallo": 1,
     "EU-IT-Toscana-Campi Bisenzio-140 Via fra Guittone": 1,
     "EU-IT-Lombardia-Peschiera Borromeo-23-Via Liguria": 1,
-    "EU-NL-Gefco Oosterhout": 1,
-    "EU-IT-Veneto-Padova-11-Via Portogallo": 1
+    "EU-NL-Gefco Oosterhout": 1
   },
   "trade_in": {
     "total": 623
